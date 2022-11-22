@@ -1,0 +1,6 @@
+name: 'employees'
+type: module
+description: 'Modulo para gestion de empleados'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom'

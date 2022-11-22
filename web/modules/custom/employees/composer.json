@@ -1,0 +1,13 @@
+{
+    "name": "employees",
+    "type": "drupal-module",
+    "description": "Modulo para gestion de empleados",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/employees",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/employees",
+        "source": "http://cgit.drupalcode.org/employees",
+    },
+}

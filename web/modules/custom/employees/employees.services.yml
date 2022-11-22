@@ -1,0 +1,8 @@
+services:
+  employees.employees_repository:
+    class: Drupal\employees\Repository\EmployeesRepository
+    arguments: []
+
+  employees.employees_service:
+    class: Drupal\employees\Services\EmployeesService
+    arguments: ['@employees.employees_repository']

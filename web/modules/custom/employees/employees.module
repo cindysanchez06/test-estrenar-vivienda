@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains employees.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function employees_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the employees module.
+    case 'help.page.employees':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Modulo para gestion de empleados') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function employees_theme() {
+  return [
+    'employees' => [
+      'render element' => 'children',
+    ],
+  ];
+}
