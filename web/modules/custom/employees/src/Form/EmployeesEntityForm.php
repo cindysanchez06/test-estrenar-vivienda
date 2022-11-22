@@ -62,6 +62,11 @@ class EmployeesEntityForm extends ContentEntityForm
      */
     public function save(array $form, FormStateInterface $form_state)
     {
+        /* @var \Drupal\employees\Entity\EmployeesEntity $entity */
+        $entity = $this->entity;
+        $entityId = $entity->getId();
+
+        $isEdit = str_contains($form['#id'], 'edit');
         $position = $form_state->getValue('position')[0]['value'];
         $status = $position == "Administrador";
 
@@ -72,7 +77,7 @@ class EmployeesEntityForm extends ContentEntityForm
             'position' => $position,
             'status' => $status
         ];
-        $result = $this->employeesService->processInformation($data);
+        $result = $this->employeesService->processInformation($data, $isEdit, $entityId);
         if (!$result['success']) {
             \Drupal::messenger()->addError($result['message']);
         }
@@ -100,10 +105,10 @@ class EmployeesEntityForm extends ContentEntityForm
         if (empty($dateBirth)) {
             $form_state->setErrorByName('date_birth', 'La fecha de nacimiento no puede estar vacia');
         }
-        if (!ctype_alnum($name)) {
+        if (!ctype_alnum($name[0]['value'])) {
             $form_state->setErrorByName('name', 'El nombre solo debe contener caracteres alfanumericos');
         }
-        if (!is_numeric($documentNumber)) {
+        if (!is_numeric($documentNumber[0]['value'])) {
             $form_state->setErrorByName('document_number', 'El numero de documento solo debe 
             contener numeros');
         }

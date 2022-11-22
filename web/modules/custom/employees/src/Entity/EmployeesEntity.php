@@ -83,6 +83,11 @@ class EmployeesEntity extends ContentEntityBase implements EmployeesEntityInterf
         return $this->get('name')->value;
     }
 
+    public function getId()
+    {
+        return $this->get('id')->value;
+    }
+
     /**
      * {@inheritdoc}
      */
