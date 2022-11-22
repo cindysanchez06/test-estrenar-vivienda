@@ -1,0 +1,13 @@
+{
+    "name": "api",
+    "type": "drupal-module",
+    "description": "Este modulo otorga los servicios necesarios para consumir APIS",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/api",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/api",
+        "source": "http://cgit.drupalcode.org/api",
+    },
+}

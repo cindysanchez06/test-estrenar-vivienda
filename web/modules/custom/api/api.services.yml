@@ -1,0 +1,3 @@
+services:
+  api.request_service:
+    class: Drupal\api\Services\RequestService
