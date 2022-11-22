@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains posts.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function posts_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the posts module.
+    case 'help.page.posts':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function posts_theme() {
+  return [
+    'posts_lists' => [
+        'variables' => ['items' => [], 'title' => ''],
+    ],
+  ];
+}

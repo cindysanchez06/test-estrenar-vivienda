@@ -1,5 +1,7 @@
 <?php
 
+namespace Drupal\api\Services;
+
 class RequestService
 {
     private $client;

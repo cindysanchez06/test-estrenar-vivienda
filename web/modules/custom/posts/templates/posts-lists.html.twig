@@ -1,0 +1,25 @@
+{% block body %}
+    <div class="container">
+        <h1 class="title">Posts</h1>
+        <div style="width: 100%">
+            {% if items is empty %}
+                <h1>No hay informacion</h1>
+            {% else %}
+            <table class="default">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+                {% for item in items %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.title }}</td>
+                        <td>{{ item.body }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

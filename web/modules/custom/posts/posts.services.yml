@@ -1,0 +1,4 @@
+services:
+  posts.posts_services:
+    class: Drupal\posts\Services\PostsServices
+    arguments: [ '@api.request_service' ]

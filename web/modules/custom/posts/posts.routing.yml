@@ -1,0 +1,8 @@
+post.list:
+  path: '/posts/list'
+  defaults:
+    _controller: '\Drupal\posts\Controller\PostsController::index'
+    _tile: 'Posts'
+  requirements:
+    _access: "TRUE"
+    _permission: 'access content'
