@@ -249,7 +249,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'Pbu_qkADdiKR8F7Baa-HukyC3S3gUuhMaX2JECiBMLwsiGaGSmCR8YdkTTC2QXc_5Ukv6BBZxQ';
+$settings['hash_salt'] = 'P_mRheCeqF1NBCsOfUSYCglTqsCUVWxBTsKgHpdg0-MfR46viB8fSLZPBq8mdTxkLtn-plyruw';
 
 /**
  * Deployment identifier.
@@ -797,6 +797,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 
 
 $config['system.logging']['error_level'] = 'verbose';
+
 $databases['default']['default'] = array (
   'database' => 'estrenar_vivienda',
   'username' => 'root',
@@ -808,4 +809,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_9RvSsIhLvEfNhBrpkRACj0dV1IjQujVvBF8kBucm_LQWebFsnvy4t1QWmN4Xe2vqFd6gay5ROQ/sync';
+$settings['config_sync_directory'] = 'sites/default/files/config_DzJ_qYCCJJWI4KYAZcgK23IcxhLr6B_xJDUjtGMS3_-Bn_PiDVvHHqlbjVrLge66u6PXs_JYrw/sync';

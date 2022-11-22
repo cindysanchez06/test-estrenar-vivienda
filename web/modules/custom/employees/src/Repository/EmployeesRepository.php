@@ -25,6 +25,7 @@ class EmployeesRepository extends Database
     $employee->setPosition($data['position']);
     $employee->setDocumentNumber($data['document_number']);
     $employee->setOwnerId($data['user_id']);
+    $employee->setStatus($data['status']);
     $employee->save();
     return $employee;
   }
